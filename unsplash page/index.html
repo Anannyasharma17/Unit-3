@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/components/navbar.css">
+</head>
+<body>
+    <div id="container">
+
+        <div id="sidebar">
+           
+        </div>
+
+        <div id="main">
+        
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="module">
+
+    import sidebar from './components/sidebar.js'
+
+    import {getData, display} from './scripts/main.js'
+
+    document.querySelector("#sidebar").innerHTML = sidebar();
+
+    document.querySelector("#searchbar").addEventListener("keypress" , (e)=>{
+        if(e.key == 'Enter'){
+
+          let searchData =  document.querySelector("#searchbar").value;
+          localStorage.setItem("inputData" , searchData);
+          window.location.href = 'search.html';
+
+        }
+    });
+
+    let key = "9YEBx973KwzI7CS_urOoQrpjZzcWbK7_rpv0bfk5loY";
+          let url = `https://api.unsplash.com/search/photos/?query=india&client_id=${key}`; 
+          let pictures = await getData(url);
+
+          let parent = document.querySelector("#main");
+
+          display(pictures, parent);
+
+</script>

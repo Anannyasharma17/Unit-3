@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check Console...</h1>
+</body>
+</html>
+
+<script>
+
+var i;
+var myarr = new myarray(1,2,3,4);
+function myarray(){
+    for(i=0; i<arguments.length; i++){
+        this[i] = arguments[i];
+    }
+}
+
+myarray.prototype.push = function(x){
+    this[i++] = x;
+}
+
+myarray.prototype.pop = function(x){
+    delete this[--i];
+}
+
+myarray.prototype.reverse = function (){
+    let left = 0; right = i -1;
+    for(let k=0; k< i/2; k++){
+        swap(myarr, left, right);
+        left++;
+        right--;
+    }
+
+    function swap(obj, i, j){
+        var c = obj[i];
+        obj[i] = obj[j];
+        obj[j] = c;
+    }
+}
+
+myarray.prototype.first = function(){
+    var x = myarr[0];
+    return x;
+}
+
+myarr.push(6);
+myarr.push(8);
+myarr.push(12);
+
+myarr.pop();
+myarr.pop();
+myarr.pop();
+
+myarr.reverse();
+
+console.log(myarr.first());
+
+console.log(Object.values(myarr));
+
+
+
+</script>

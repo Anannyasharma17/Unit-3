@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check Console</h1>
+</body>
+</html>
+
+<script>
+
+    const Amar = {
+        name: "amar",
+        occupation: "singer",
+        location: "Goa",
+
+        talent(){
+            console.log(` Name: ${this.name}, Speaciality:  ${this.occupation} `)
+        }
+    }
+
+    const Akbar = {
+        name: "akbar",
+        occupation: "chef",
+        location: "Mumbai",
+
+        talent(){
+            console.log(` Name: ${this.name}, Speaciality:  ${this.occupation} `)
+        }
+    }
+    
+
+    const Anthony = {
+        name: "anthony",
+        occupation: "magician",
+        location: "Kashmir",
+
+        talent(){
+            console.log(` Name: ${this.name}, Speaciality:  ${this.occupation} `)
+        }
+    }
+    Anthony.talent.call(Amar);
+    Amar.talent.call(Akbar);
+    Akbar.talent.call(Amar);
+    Anthony.talent.call(Akbar);
+    Akbar.talent.call(Anthony);
+    Amar.talent.call(Anthony);
+    
+</script>

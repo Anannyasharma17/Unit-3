@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        button{
+            font-size: x-large;
+            font-weight: 700;
+            background-color: brown;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <button onclick="objects()">Objects</button>
+    <button onclick="arrays()">Arrays</button>
+    <button onclick="functions()">Functions</button>
+    <button onclick="strings()">Strings</button>
+    <button onclick="numbers()">Numbers</button>
+    <button onclick="nulls()">null</button>
+    <button onclick="undefineds()">undefined</button>
+
+    <div class="container"></div>
+  </body>
+</html>
+
+<script>
+  
+function objects() {
+  
+   document.querySelector(".container").innerHTML = "";
+  
+   var p = document.createElement("p");
+p.textContent = "In JavaScript, almost 'everything' is an object.";
+  
+   var ul = document.createElement("ul");
+  
+   var li1 = document.createElement("li");
+li1.textContent = "Booleans can be objects (if defined with the new keyword)";
+  
+   var li2 = document.createElement("li");
+li2.textContent = "Numbers can be objects (if defined with the new keyword)";
+  
+   var li3 = document.createElement("li");
+li3.textContent = "Strings can be objects (if defined with the new keyword)";
+  
+   var li4 = document.createElement("li");
+li4.textContent = "Dates are always objects";
+  
+   var li5 = document.createElement("li");
+li5.textContent = "Maths are always objects";
+  
+    ul.append(li1, li2, li3, li4, li5);
+  
+    document.querySelector(".container").append(p, ul);
+}
+  
+
+   function arrays() {
+  
+    document.querySelector(".container").innerHTML = "";
+  
+    var p = document.createElement("p");
+    p.textContent = "An array is a special variable, which can hold more than one value:";
+  
+    var ul = document.createElement("ul");
+  
+    var li1 = document.createElement("li");
+    li1.textContent = "Using an array literal is the easiest way to create a JavaScript Array.";
+  
+    var li2 = document.createElement("li");
+    li2.textContent = "Spaces and line breaks are not important.";
+  
+    var li3 = document.createElement("li");
+    li3.textContent = "Strings can be objects (if defined with the new keyword)";
+  
+    var li4 = document.createElement("li");
+    li4.textContent = "You access an array element by referring to the index number:";
+  
+    var li5 = document.createElement("li");
+    li5.textContent = "For simplicity, readability and execution speed, use the array literal method.";
+  
+    ul.append(li1, li2, li3, li4, li5);
+  
+    document.querySelector(".container").append(p, ul);
+}
+  
+function functions() {
+  
+    document.querySelector(".container").innerHTML = "";
+  
+    var p = document.createElement("p");
+    p.textContent = "JavaScript provides functions similar to most of the scripting and programming languages.";
+  
+    var ul = document.createElement("ul");
+  
+    var li1 = document.createElement("li");
+    li1.textContent = "In JavaScript, a function allows you to define a block of code, give it a name and then execute it as many times as you want.";
+  
+    var li2 = document.createElement("li");
+    li2.textContent = "In JavaScript, a function allows you to define a block of code, give it a name and then execute it as many times as you want.";
+  
+    var li3 = document.createElement("li");
+    li3.textContent = "A function can have one or more parameters, which will be supplied by the calling code and can be used inside a function. JavaScript is a dynamic type scripting language, so a function parameter can have value of any data type.";
+  
+    var li4 = document.createElement("li");
+    li4.textContent = "You can pass less or more arguments while calling a function. If you pass less arguments then rest of the parameters will be undefined. If you pass more arguments then additional arguments will be ignored.";
+  
+    var li5 = document.createElement("li");
+          li5.textContent = "The arguments object is an array like object. You can access its values using index similar to array. However, it does not support array methods.";
+  
+         ul.append(li1, li2, li3, li4, li5);
+  
+         document.querySelector(".container").append(p, ul);
+     }
+  
+  
+     function strings() {
+  
+    document.querySelector(".container").innerHTML = "";
+    var p = document.createElement("p");
+    p.textContent = "Here you will learn what string is, how to create, compare and concatenate strings in JavaScript.";
+    var ul = document.createElement("ul");
+    var li1 = document.createElement("li");
+    li1.textContent = "String value can be assigned to a variable using equal to (=) operator.";
+    var li2 = document.createElement("li");
+    li2.textContent = "Since, string is character index, it can be accessed using for loop and for-of loop.";
+    var li3 = document.createElement("li");
+    li3.textContent = "Strings can be objects (if defined with the new keyword)";
+    var li4 = document.createElement("li");
+    li4.textContent = "A string is immutable in JavaScript, it can be concatenated using plus (+) operator in JavaScript.";
+     var li5 = document.createElement("li");
+     li5.textContent = "Use quotation marks inside string value that does not match the quotation marks surrounding the string value. For example, use single quotation marks if the whole string is enclosed with double quotation marks and visa-versa.";
+    ul.append(li1, li2, li3, li4, li5);
+  
+         document.querySelector(".container").append(p, ul);
+     }
+  
+  
+     function numbers() {
+  
+    document.querySelector(".container").innerHTML = "";
+    var p = document.createElement("p");
+    p.textContent = "JavaScript Numbers: Integer, Float, Binary, Exponential, Hexadecimal, Octal";
+    var ul = document.createElement("ul");
+    var li1 = document.createElement("li");
+    li1.textContent = "The Number is a primitive data type used for positive or negative integer, float, binary, octal, hexadecimal, and exponential values in JavaScript.";
+    var li2 = document.createElement("li");
+    li2.textContent = "The Number type in JavaScript is double-precision 64 bit binary format like double in C# and Java. It follows the international IEEE 754 standard.";
+    var li3 = document.createElement("li");
+    li3.textContent = "The first character in a number type must be an integer value, and it must not be enclosed in quotation marks. The following example shows the variables having different types of numbers in JavaScript.";
+    var li4 = document.createElement("li");
+    li4.textContent = "Numbers can be positive or negative integers. However, integers are floating-point values in JavaScript. Integers value will be accurate up to 15 digits in JavaScript. Integers with 16 digits onwards will be changed and rounded up or down; therefore, use BigInt for integers larger than 15 digits.";
+    var li5 = document.createElement("li");
+    li5.textContent = "The BigInt type is a numeric primitive type that can store integers with arbitrary precision. Use the BigInt for the large integers having more than 15 digits. Append n to the end of an integer to make it BigInt.";
+    ul.append(li1, li2, li3, li4, li5);
+    document.querySelector(".container").append(p, ul);
+    }
+  
+  
+    function nulls() {
+
+    document.querySelector(".container").innerHTML = "";
+    document.querySelector(".container").innerHTML = "";
+    document.querySelector(".container").innerHTML = "";
+    document.querySelector(".container").innerHTML = "";
+    document.querySelector(".container").innerHTML = "";
+
+    var p = document.createElement("p");
+    var p = document.createElement("p");
+    var p = document.createElement("p");
+    var p = document.createElement("p");
+    var p = document.createElement("p");
+    p.textContent = "As we have seen in the variable section that we can assign any primitive or non-primitive type of value to a variable. JavaScript includes two additional primitive type values - null and undefined, that can be assigned to a variable that has special meaning.";
+    p.textContent = "As we have seen in the variable section that we can assign any primitive or non-primitive type of value to a variable. JavaScript includes two additional primitive type values - null and undefined, that can be assigned to a variable that has special meaning.";
+    p.textContent = "As we have seen in the variable section that we can assign any primitive or non-primitive type of value to a variable. JavaScript includes two additional primitive type values - null and undefined, that can be assigned to a variable that has special meaning.";
+    p.textContent = "As we have seen in the variable section that we can assign any primitive or non-primitive type of value to a variable. JavaScript includes two additional primitive type values - null and undefined, that can be assigned to a variable that has special meaning.";
+    p.textContent = "As we have seen in the variable section that we can assign any primitive or non-primitive type of value to a variable. JavaScript includes two additional primitive type values - null and undefined, that can be assigned to a variable that has special meaning.";
+
+
+    var ul = document.createElement("ul");
+    var ul = document.createElement("ul");
+    var ul = document.createElement("ul");
+    var ul = document.createElement("ul");
+    var ul = document.createElement("ul"); 
+
+
+    var li1 = document.createElement("li");
+    var li1 = document.createElement("li");
+    var li1 = document.createElement("li");
+    var li1 = document.createElement("li");
+    var li1 = document.createElement("li");
+    li1.textContent = "You can assign null to a variable to denote that currently that variable does not have any value but it will have later on. A null means absence of a value.";
+    li1.textContent = "You can assign null to a variable to denote that currently that variable does not have any value but it will have later on. A null means absence of a value.";
+    li1.textContent = "You can assign null to a variable to denote that currently that variable does not have any value but it will have later on. A null means absence of a value.";
+    li1.textContent = "You can assign null to a variable to denote that currently that variable does not have any value but it will have later on. A null means absence of a value.";
+    li1.textContent = "You can assign null to a variable to denote that currently that variable does not have any value but it will have later on. A null means absence of a value.";
+
+
+    var li2 = document.createElement("li");
+    var li2 = document.createElement("li");
+    var li2 = document.createElement("li");
+    var li2 = document.createElement("li");
+    var li2 = document.createElement("li");
+    li2.textContent = "In the above example, null is assigned to a variable myVar. It means we have defined a variable but have not assigned any value yet, so value is absence.";
+    li2.textContent = "In the above example, null is assigned to a variable myVar. It means we have defined a variable but have not assigned any value yet, so value is absence.";
+    li2.textContent = "In the above example, null is assigned to a variable myVar. It means we have defined a variable but have not assigned any value yet, so value is absence.";
+    li2.textContent = "In the above example, null is assigned to a variable myVar. It means we have defined a variable but have not assigned any value yet, so value is absence.";
+    li2.textContent = "In the above example, null is assigned to a variable myVar. It means we have defined a variable but have not assigned any value yet, so value is absence.";
+
+
+    var li3 = document.createElement("li");
+    var li3 = document.createElement("li");
+    var li3 = document.createElement("li");
+    var li3 = document.createElement("li");
+    var li3 = document.createElement("li");
+    li3.textContent = "A null value evaluates to false in conditional expression. So you don't have to use comparison operators like === or !== to check for null values.";
+    li3.textContent = "A null value evaluates to false in conditional expression. So you don't have to use comparison operators like === or !== to check for null values.";
+    li3.textContent = "A null value evaluates to false in conditional expression. So you don't have to use comparison operators like === or !== to check for null values.";
+    li3.textContent = "A null value evaluates to false in conditional expression. So you don't have to use comparison operators like === or !== to check for null values.";
+    li3.textContent = "A null value evaluates to false in conditional expression. So you don't have to use comparison operators like === or !== to check for null values.";
+
+
+
+
+
+    var li4 = document.createElement("li");
+    var li4 = document.createElement("li");
+    var li4 = document.createElement("li");
+    var li4 = document.createElement("li");
+    var li4 = document.createElement("li");
+    li4.textContent = "If you try to find DOM element using document.getElelementByID for example, and if element is found then it will return null. So it is recommended to check for null before doing something with that element.";
+    li4.textContent = "If you try to find DOM element using document.getElelementByID for example, and if element is found then it will return null. So it is recommended to check for null before doing something with that element.";
+    li4.textContent = "If you try to find DOM element using document.getElelementByID for example, and if element is found then it will return null. So it is recommended to check for null before doing something with that element.";
+    li4.textContent = "If you try to find DOM element using document.getElelementByID for example, and if element is found then it will return null. So it is recommended to check for null before doing something with that element.";
+    li4.textContent = "If you try to find DOM element using document.getElelementByID for example, and if element is found then it will return null. So it is recommended to check for null before doing something with that element.";
+
+
+
+
+
+    var li5 = document.createElement("li");
+    var li5 = document.createElement("li");
+    var li5 = document.createElement("li");
+    var li5 = document.createElement("li");
+    var li5 = document.createElement("li");
+    li5.textContent = "So it is recommended to check for null before doing something with that element.";
+    li5.textContent = "So it is recommended to check for null before doing something with that element.";
+    li5.textContent = "So it is recommended to check for null before doing something with that element.";
+    li5.textContent = "So it is recommended to check for null before doing something with that element.";
+    li5.textContent = "So it is recommended to check for null before doing something with that element.";
+
+
+
+
+
+    ul.append(li1, li2, li3, li4, li5);
+    ul.append(li1, li2, li3, li4, li5);
+    ul.append(li1, li2, li3, li4, li5);
+    ul.append(li1, li2, li3, li4, li5);
+    ul.append(li1, li2, li3, li4, li5);
+
+
+
+
+
+    document.querySelector(".container").append(p, ul);
+    }
+
+    function undefineds() {
+    document.querySelector(".container").innerHTML = "";
+    var p = document.createElement("p");
+    p.textContent = "Undefined is also a primitive value in JavaScript. A variable or an object has an undefined value when no value is assigned before using it. So you can say that undefined means lack of value or unknown value.";
+    var ul = document.createElement("ul");
+    var li1 = document.createElement("li");
+    li1.textContent = "In the above example, we have not assigned any value to a variable named 'myVar'. A variable 'myVar' lacks a value. So it is undefined.";
+    var li2 = document.createElement("li");
+    li2.textContent = "You will get undefined value when you call a non-existent property or method of an object.";
+    var li3 = document.createElement("li");
+    li3.textContent = "In the above example, a function Sum does not return any result but still we try to assign its resulted value to a variable. So in this case, result will be undefined.";
+    var li4 = document.createElement("li");
+    li4.textContent = "If you pass less arguments in function call then, that parameter will have undefined value.";
+    var li5 = document.createElement("li");
+    li5.textContent = "An undefined evaluates to false when used in conditional expression.";
+    ul.append(li1, li2, li3, li4, li5);
+     document.querySelector(".container").append(p, ul);
+    }
+</script>

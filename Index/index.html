@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        color: white;
+        background-color: rgb(161, 31, 161);
+      }
+    </style>
+  </head>
+  <body>
+      <h1></h1>
+    <button onclick="dice()">Click Here</button>
+  </body>
+</html>
+
+<script>
+
+  function getRandom(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
+  function dice(){
+      var num = getRandom(1, 6);
+    console.log(num);
+    if (num == 1){
+        document.querySelector("h1").textContent = "1"
+        document.querySelector("h1").style.color = "yellow"
+    }
+    else if (num == 6){
+        document.querySelector("h1").textContent = "6"
+        document.querySelector("h1").style.color = "green" 
+    }
+    else {
+        document.querySelector("h1").textContent = num;
+        document.querySelector("h1").style.color = "red" 
+    }
+
+  }
+
+</script>

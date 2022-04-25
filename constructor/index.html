@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cont {
+        height: 400px;
+        width: 1000px;
+        border: solid;
+        margin: auto;
+        border-radius: 5px;
+      }
+      #name,
+      #city,
+      #num {
+        background-color: rgb(252, 198, 207);
+        height: 50px;
+        width: 200px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: large;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      form {
+        margin: 5px 120px 0px 120px;
+      }
+
+      #done {
+        background-color: rgb(245, 184, 245);
+        width: 80px;
+        height: 30px;
+        border-radius: 5px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      table{
+          width: 70%;
+          margin: 10px 120px;
+          text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <form action="">
+        <input id="name" type="text" placeholder="Write your name" />
+        <input id="city" type="text" placeholder="Write your city" />
+        <input id="num" type="number" placeholder="Write your number" />
+        <input id="done" type="submit" />
+      </form>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>City</th>
+              <th>Number</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  document.querySelector("form").addEventListener("submit", Submit);
+
+  var arr = JSON.parse(localStorage.getItem("student_data")) || [];
+  table();
+
+  function Submit() {
+    var Name1 = document.querySelector("#name").value;
+    var City1 = document.querySelector("#city").value;
+    var Number1 = document.querySelector("#num").value;
+
+    var obj = new data(Name1, City1, Number1);
+
+    arr.push(obj);
+
+    localStorage.setItem("student_data", JSON.stringify(arr));
+  }
+
+  function data(Name1, City1, Number1) {
+    this.name = Name1;
+    this.city = City1;
+    this.number = Number1;
+  }
+
+  function table() {
+    document.querySelector("tbody").innerHTML = "";
+
+    arr.map(function (info) {
+      var tr = document.createElement("tr");
+
+      var td1 = document.createElement("td");
+      td1.textContent = info.name;
+
+      var td2 = document.createElement("td");
+      td2.textContent = info.city;
+
+      var td3 = document.createElement("td");
+      td3.textContent = info.number;
+
+      tr.append(td1, td2, td3);
+      document.querySelector("tbody").append(tr);
+    });
+  }
+</script>

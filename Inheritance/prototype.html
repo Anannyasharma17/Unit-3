@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check Console...</h1>
+</body>
+</html>
+
+<script>
+    var grandparents = {
+        healthy: true,
+        strict: true,
+        name: "grandfather"
+    }
+
+    var parents = Object.create(grandparents)
+
+    var me = Object.create(parents)
+
+    parents.fathername= "Ramanand"
+    me.myname = "Anannya"
+    console.log(grandparents, parents, me)
+</script>

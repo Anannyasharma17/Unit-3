@@ -1,0 +1,71 @@
+/* *{
+    margin: 0;
+    padding:0;
+} */
+.nav {
+  display: flex;
+  border: solid;
+  color: black;
+  height: 30px;
+  /* padding: 15px 0 0 20px; */
+  margin: 10px auto 0 auto;
+  width: 950px;
+  /* position: fixed; */
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav > div {
+  margin-left: 30px;
+  margin-right: 10px;
+  /* border: solid; */
+}
+
+.nav > div:hover {
+  cursor: pointer;
+}
+
+#form {
+  /* margin-top: 50px; */
+  /* border: solid red; */
+  margin: 100px auto 0 auto;
+  width: 40%;
+  padding: 1% 1% 0 1%;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+input {
+  width: 60%;
+  height: 30px;
+  padding-left: 2%;
+  margin: 20px 0 20px 0;
+  border-radius: 5px;
+}
+
+input:focus {
+  border: 3px solid skyblue;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#submit {
+  width: 20%;
+  background-color: rgb(0, 128, 128);
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#login-form-div {
+  /* border: solid skyblue; */
+  height: 600px;
+  margin: auto;
+  width: 1000px;
+  font-family: sans-serif;
+  text-align: center;
+}

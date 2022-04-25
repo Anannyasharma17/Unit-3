@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signup.css">
+    
+    <title>Signup</title>
+  </head>
+
+  <body>
+    <div id="signup-form-div">
+      <div class="nav">
+        <div onclick="window.location.href= 'index.html'">HOME</div>
+        <div onclick="window.location.href= 'signup.html' ">Signup</div>
+        <div onclick="window.location.href= 'login.html' ">Login</div>
+      </div>
+
+      <div id="form">
+        <form>
+          <!--Write form input elements here-->
+          <h1>Signup</h1>
+          <input id="one" type="text" placeholder="Enter your Name" />
+          <p id="wrong1" style="color: red;"></p>
+
+          <input id="two" type="number" placeholder="Enter your Contact" />
+          <p id="wrong2" style="color: red;"></p>
+
+          <input id="three" type="email" placeholder="Enter your Email">
+          <p id="wrong3" style="color: red;"></p>
+
+          <input id="four" type="password" placeholder="Enter your Password">
+          <p id="wrong4" style="color: red;"></p>
+          <input id="submit" type="submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="signup.js"></script>

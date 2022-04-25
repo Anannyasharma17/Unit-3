@@ -1,0 +1,70 @@
+.nav {
+    display: flex;
+    border: solid;
+    color: black;
+    height: 30px;
+    /* padding: 15px 0 0 20px; */
+    margin: 10px auto 1% auto;
+    width: 100%;
+    /* position: fixed; */
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .nav > div {
+    margin-left: 30px;
+    margin-right: 10px;
+    /* border: solid; */
+  }
+  
+  .nav > div:hover {
+    cursor: pointer;
+  }
+
+  #slideshow {
+    /* border: solid; */
+    /* height: 300px; */
+    width: 50%;
+    margin-bottom: 1%;
+    margin: auto;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    }
+
+  #sort-buttons{
+    /* border: solid brown; */
+    height: 30px;
+    width: 10%;
+    margin-bottom: 1%;
+  }
+
+  #sort-buttons > select{
+    width: 100%;
+    height: 100%;
+  }
+
+  #movies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* border: solid chartreuse; */
+    grid-gap: 30px;
+  }
+
+  #movies > div {
+    display: flex;
+    /* justify-content: space-between; */
+    /* border: solid blue; */
+    /* text-align: center; */
+    height: 200px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+  }
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+
+  #left {
+    width: 30%;
+    margin-right: 2%;
+  }

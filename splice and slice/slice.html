@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>splice and slice</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const fruits = ["apple", "banana", "orange", "cherry"];
+  Object.freeze(fruits);
+  fruits.splice(1, 0, "mango");
+
+  console.log(fruits);
+
+  fruits.splice(4, 1, "guava");
+
+  console.log(fruits);
+
+  // var x = fruits.slice(1, 2)
+  // console.log(x);
+
+  // Explain the difference between Object.freeze() and const. Write relevant code and add comments.
+
+  // example for Object.freeze
+
+  var info = {
+    name: "Anannya",
+    age: 21,
+  };
+
+  Object.freeze(info);
+  info.name = "Divya";
+  console.log(info);
+ 
+  info = {
+      add: "Delhi",
+      pincode: 201304
+  }
+
+  console.log(info)
+
+
+//   example of const 
+
+const arr = [1,2,3,4,5];
+arr[0] = [5,4,3,2,1]
+
+console.log(arr);
+
+
+// DIFFERENCE BETWEEN SPLICE() AND SLICE();
+
+
+// splice
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 1, "Lemon", "Kiwi");
+
+// slice
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const myBest = fruits.slice(-3, -1);
+  
+</script>

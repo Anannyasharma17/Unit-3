@@ -1,0 +1,19 @@
+#total {
+    text-align: center;
+    border: solid black;
+    width: 10%;
+    display: grid;
+    grid-template-columns: (2, 1fr);
+
+}
+
+img {
+    width: 100%;
+}
+
+#cart {
+    width: 60%;
+    display: flex;
+    gap: 10px;
+    font-weight: 700;
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Home</title>
+    <style>
+         #A{
+            height: 200px;
+            width: 200px;
+            border: 1px solid;
+            overflow: scroll;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div onclick="window.location.href= 'index.html'">Home</div>
+        <div onclick="window.location.href= 'signup.html' ">Signup</div>
+        <div onclick="window.location.href= 'login.html' ">Login</div>
+      </div>
+
+    <div id="slideshow">
+        <!-- <video src="/slideshow video.mp4" muted></video> -->
+        <!--Show Slideshow here-->
+
+        <img id="image" src="https://bit.ly/3ruajQS" alt="">
+
+    </div>
+
+    <div id="sort-buttons">
+        <select name="" id="sort" onchange="sort()">
+            <option value="">Sort By Year</option>
+            <option value="high">Latest</option>
+            <option value="low">Old</option>
+        </select>
+
+        <input type="" placeholder="Search your favourite movie!">
+        <button id="search" >🔍Search</button>
+        <div id="A"></div>
+        <!--Add sorting here-->
+    </div>
+    
+    <div id="movies">
+        
+    </div>
+</body>
+</html>
+
+<script>
+
+var data;
+
+async function getMovies(){
+
+    let res = await fetch("http://www.omdbapi.com/?apikey=f3d5c71f&s=titanic");
+
+    data = await res.json();
+    console.log(data)
+
+    pose(data.Search);
+}
+
+// async function search() {
+//     var name = document.querySelector("input").value;
+//     let res = await fetch(`http://www.omdbapi.com/?apikey=f3d5c71f&s=${name}`);
+
+//     data = await res.json();
+
+//     pose(data.Search);
+
+// }
+let Debouncing = async()=>{
+        try{
+
+            let name = document.querySelector("input").value;
+            let res = await fetch(`http://www.omdbapi.com/?apikey=f3d5c71f&s=${name}`);
+
+            let data = await res.json();
+            //  console.log(data);
+            display(data.Search);
+        }
+
+        catch(err){
+            console.log(err);
+        }
+    }
+
+
+//  getMovies();
+
+ function pose(movies){
+    document.getElementById("movies").innerHTML = "";
+
+   movies.map (function (items){
+    var div = document.createElement("div")
+
+    var divleft = document.createElement("div")
+    divleft.setAttribute("id", "left")
+    
+    var image =  document.createElement("img");
+    image.setAttribute("src", items.Poster)
+
+    var title = document.createElement("h3");
+    title.textContent = items.Title
+
+    var ratings = document.createElement("p");
+    var num = Math.random()*10
+    ratings.textContent =`${num.toFixed(1)} ★`;
+    
+    var type = document.createElement("p");
+    type.textContent = items.Type
+
+    var year = document.createElement("p");
+    year.textContent = items.Year
+
+    var divright = document.createElement("div")
+    divright.setAttribute("id", "right")
+
+
+    divleft.append(image);
+
+    divright.append(title, ratings, type, year);
+
+    div.append(divleft, divright);
+
+    document.getElementById("movies").append(div);
+   })
+
+ }
+
+ let display = (x)=>{
+        document.querySelector("#A").innerHTML = "";
+         console.log(x);
+        x.map ((item)=>{
+            let div = document.createElement("div");
+
+            let name = document.createElement("h3");
+            name.textContent = item.Title;
+
+            div.append(name);
+
+            document.querySelector("#A").append(div);
+        });
+        
+    }
+
+    let search1 =   document.getElementById("search"); 
+    let timerId;
+    search1.oninput=()=>{
+        
+        if(timerId){
+            clearTimeout(timerId);
+        }
+        timerId = setTimeout(function() {
+            Debouncing();
+        },Delay);
+    }
+    
+    let main = (Delay)=>{
+        console.log("Abc")
+      
+        // if(timerId){
+        //     clearTimeout(timerId);
+        // }
+        // timerId = setTimeout(function() {
+        //     Debouncing();
+        // },Delay);
+    }
+
+
+function sort(){
+    var year = document.querySelector("#sort").value;
+    console.log(year);
+
+    if(year == "low"){
+       data.Search.sort( function (a, b){
+           return (+a.Year - +b.Year)
+       });
+    }
+
+    if(year == "high"){
+        data.Search.sort( function (a, b){
+            return (+b.Year - +a.Year)
+        });
+     }
+     pose(data.Search);
+
+}
+
+</script>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍔 McDonald's</title>
+    <style>
+      body{
+        background-image: url("/image/wp1919512-mcdonalds-wallpapers.jpg");
+        background-size: cover;
+      }
+
+      #container {
+        text-align: center;
+        color: brown;
+        font-size: xx-large;
+      }
+
+      img {
+        height: 250px;
+        margin-right: 3%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+
+      h1 {
+        display: inline-block;
+      }
+
+      #header > img {
+        height: 60px;
+        box-shadow: none;
+      }
+
+      #image {
+        display: flex;
+        align-items: center;
+        /* border: solid; */
+        margin: auto;
+        /* width: 80%; */
+        justify-content: center;
+        margin-top: 3%;
+      }
+
+      button{
+        height: 45px;
+        border-radius: 8px;
+        width: 150px;
+        background-color: rgb(165,42,42);
+        color: white;
+        font-weight: 700;
+        font-size: large;
+        border: none;
+        cursor: grab;
+      }
+
+      input{
+        height: 25px;
+        width: 25px;
+      }
+
+      button:hover{
+        background-color: rgb(255,195,0);
+        color: rgb(165,42,42);
+        transition: 500ms;
+        /* opacity: 0.9; */
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <h1>Welcome to McDonald's!</h1>
+        <img src="/image/emojipng.com-1892350.png" alt="" />
+        <p id="timer"></p>
+      </div>
+
+      <div>
+        <input type="checkbox" id="burger" />Burger🍔
+        <input type="checkbox" id="softy" />Softy🍦
+        <input type="checkbox" id="fries" />Fries🍟
+        <input type="checkbox" id="drink" />Cold drink🍹
+
+        <button onclick="order()">Order Food</button>
+      </div>
+
+      <div id="image"></div>
+    </div>
+  </body>
+</html>
+
+<script>
+  var arr = [
+    "https://bit.ly/3L7VUlf",
+    "https://bit.ly/3rphdGZ",
+    "https://bit.ly/3on3n6m",
+    "https://bit.ly/3sjtNqN",
+  ];
+
+  var count = 5;
+
+  function order() {
+    document.querySelector("#image").innerHTML = "";
+
+    var burger = document.getElementById("burger");
+    var softy = document.getElementById("softy");
+    var fries = document.getElementById("fries");
+    var drink = document.getElementById("drink");
+
+    // var x = setInterval( function (){
+    //     document.querySelector("#timer").textContent = count--;
+    //     if(count == 0){
+    //         clearInterval(x);
+    //         document.querySelector("#timer").innerHTML = "";
+    //     }
+    // }, 1000);
+
+    if (!burger.checked && !softy.checked && !fries.checked && !drink.checked) {
+      alert("Please select any item!🔔");
+    } else {
+      alert("your order has been Taken. Please wait for your turn.👩🏼‍🍳");
+
+      let promise = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          alert("Yippieee! Your Order is ready..!😋🤟🏼");
+
+          if (burger.checked) {
+            var img1 = document.createElement("img");
+            img1.setAttribute("src", arr[0]);
+            document.querySelector("#image").append(img1);
+          }
+
+          if (softy.checked) {
+            var img2 = document.createElement("img");
+            img2.setAttribute("src", arr[1]);
+            document.querySelector("#image").append(img2);
+          }
+
+          if (fries.checked) {
+            var img3 = document.createElement("img");
+            img3.setAttribute("src", arr[2]);
+            document.querySelector("#image").append(img3);
+          }
+
+          if (drink.checked) {
+            var img4 = document.createElement("img");
+            img4.setAttribute("src", arr[3]);
+            document.querySelector("#image").append(img4);
+          }
+        }, 5000);
+      });
+    }
+  }
+</script>

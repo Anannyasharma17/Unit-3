@@ -1,0 +1,132 @@
+body{
+  background-image: url("https://bit.ly/3Ln1n83");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+#movies > div {
+  background-color: white;
+}
+
+.nav {
+    display: flex;
+    border-radius: 8px;
+    /* border: solid; */
+    color: black;
+    height: 50px;
+    /* padding: 15px 0 0 20px; */
+    margin: 10px auto 1% auto;
+    width: 100%;
+    font-size: large;
+    font-weight: 700;
+    background-color: white;
+    /* position: fixed; */
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .nav > div {
+    margin-left: 30px;
+    margin-right: 10px;
+    /* border: solid; */
+  }
+  
+  .nav > div:hover {
+    cursor: pointer;
+  }
+
+  video{
+    width: 100%;
+    height: 100%;
+  }
+
+  #slideshow {
+    /* border: solid; */
+    /* height: 500px; */
+    width: 50%;
+    margin-bottom: 1%;
+    margin: auto;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    }
+
+  #sort-buttons{
+    /* border: solid brown; */
+    height: 50px;
+    width: 100%;
+    margin-bottom: 1%;
+    display: flex;
+    margin-top: 1%;
+    
+  }
+
+  #sort-buttons > select{
+    width: 10%;
+    height: 100%;
+    font-size: large;
+    background-color: rgb(43, 175, 131);
+    font-weight: 700;
+    border-radius: 10px;
+   
+  }
+
+  #sort-buttons input {
+    width: 40%;
+    margin-left: 3%;
+    padding-left: 2%;
+    font-size: large;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+  }
+
+  #sort-buttons input:focus{
+    outline: none;
+  }
+
+  #sort-buttons button{
+    /* margin-left: 1%; */
+    width: 7%;
+    background-color: red;
+    color: white;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: large;
+  }
+
+  #movies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* border: solid chartreuse; */
+    grid-gap: 30px;
+  }
+
+  #movies > div {
+    display: flex;
+    border-radius: 10px;
+    /* justify-content: space-between; */
+    /* border: solid blue; */
+    /* text-align: center; */
+    height: 200px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+  }
+
+  img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  #left {
+    width: 30%;
+    margin-right: 2%;
+  }

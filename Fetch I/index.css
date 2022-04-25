@@ -1,0 +1,199 @@
+body{
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#video {
+    position: fixed;
+    background-image: url(/img/beach-g2cfd6065d_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);  
+  
+    width: 100%;
+    height: 100%;
+    /* backface-visibility: hidden; */
+}
+
+video{
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+
+}
+
+.box {
+    /* border: solid white;  */
+    width: 100%;
+    height: 600px;
+    display: flex;
+    color: rgb(0, 0, 0);
+    justify-content: space-between;
+    /* opacity: 0.9; */
+}
+
+#searchBar {
+    margin-bottom: 3%;
+    margin-top: 2%;
+    width: 100%;
+    text-align: center;
+    
+}
+
+#searchBar input{
+    margin: auto;
+    height: 50px;
+    width: 40%;
+    padding-left: 2%;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 700;
+    opacity: 0.4;
+    background-color: rgba(255, 166, 0, 0.651);
+    /* margin-right: 2%; */
+}
+
+#searchBar input:focus{
+    opacity: 1;
+    transition: 500ms;
+    outline: none;
+}
+
+#searchBar button{
+    height: 50px;
+    width: 10%;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 700;
+    opacity: 0.4;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: rgba(0, 0, 83, 0.623);
+    color: white;
+    cursor: pointer;
+}
+
+#searchBar button:hover {
+    opacity: 1;
+    transition: 500ms;
+}
+
+#left {
+    width: 42%;
+    height: 100%;
+    /* border: solid yellow; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3%;
+}
+
+#left > div {
+    /* border: 1px solid rgb(247, 245, 245); */
+    border-radius: 8px;
+    background-color: transparent;
+    padding: 10%;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: rgba(236, 234, 234, 0.199) 0px 5px 15px;
+   opacity: 0.6;
+   cursor: pointer;
+}
+
+#left > div:hover {
+    opacity: 1;
+    background-color: rgba(44, 72, 75, 0.336);
+}
+
+#right {
+    width: 55%;
+    height: 100%;
+    /* border: solid green; */
+}
+
+#mapp {
+    /* border: solid blue; */
+    height: 60%;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+iframe{
+    height: 100%;
+    width: 100%;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    /* height: 500px;
+    width: 600px; */
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    /* height: 500px;
+    width: 600px; */
+    height: 100%;
+    width: 100%;
+}
+
+#container{
+    /* border: solid; */
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-between;
+    height: 40%;
+    padding: 1%;
+    box-sizing: border-box;
+    font-size: large;
+    font-weight: 700;
+    color: black;
+    
+}
+
+#container > div {
+    /* border: 1px solid rgb(204, 44, 44); */
+    border-radius: 8px;
+    /* color: rgb(122, 122, 122); */
+    width: 13%;
+    height: 100%;
+    font-size: x-large;
+    text-align: center;
+    background-color: transparent;
+    line-height: 50%;
+    box-shadow: rgba(236, 234, 234, 0.199) 0px 5px 15px;
+    background-color: rgba(255, 197, 71, 0.288);
+    /* opacity: 0.6; */
+    
+}
+
+#container img{
+    width: 70%;
+    height: 30%;
+}
+
+#left p{
+    font-size: x-large;
+    font-weight: 700;
+}
+
+#left img{
+    width: 60%;
+    height: 30%;
+}
+
